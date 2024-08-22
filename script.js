@@ -46,7 +46,12 @@ console.log(getRandomNumber());
 // funzione per pari o dispari
 
 function isEven(number){
-    return number % 2 === 0;
+    let numb;
+
+    // il numero è paro se è divisibile per due
+    (number % 2 === 0) ? numb = 'pari' : numb = 'dispari';
+
+    return numb;
 }
 
 console.log(isEven());
@@ -117,6 +122,8 @@ button.addEventListener('click', function(event){
     console.log('somma', somma);
 
     // verifico con la funz isEven se la somma è pari o dispari
+    isEven(somma);
+    console.log('isEven', isEven(somma))
 
     // verifico se la scelta dell'utente corrsponde ad isEven
 
