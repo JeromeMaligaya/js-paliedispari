@@ -93,8 +93,9 @@ formPali.addEventListener('submit', function(e){
 // ------------- ESERCIZIO PARI E DISPARI -------------
 
 // 1.recupero l'elemento dal Dom
-
-
+const form = document.querySelector(('.form'));
+const selectField = document.getElementById('evenOdd');
+const userNumberField = document.getElementById('userNumber');
 
 //2.raccolta dati
 // creo le value dei fieldIndex
