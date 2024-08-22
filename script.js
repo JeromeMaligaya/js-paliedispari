@@ -19,7 +19,7 @@ console.log(reverseText(''));
 
 // funzione che genera un numero random da min a max
 
-function getRandomNumber(min = 1, max =5, isMaxIncluded = true){
+function getRandomNumber(min = 0, max = 100, isMaxIncluded = true){
     // blocco la funz se l'utente digita un valore NaN
     if (isNaN(min) || isNaN(max)){
         console.error(`questi valori (${min} , ${max}) devono essere dei numeri`); 
@@ -108,7 +108,8 @@ button.addEventListener('click', function(event){
     console.log(userSelect, userNumber)
 
     // preparo cpuNumb, il numero generato dalla funz getRandomNumber
-
+    cpuNumber = getRandomNumber(1, 5, true);
+    console.log('cpuNumber', cpuNumber);
 
     // 3.lavorazione dati
     // sommo il numero del computer con il numero dell'utente
