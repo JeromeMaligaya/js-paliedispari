@@ -19,7 +19,7 @@ console.log(reverseText(''));
 
 // funzione che genera un numero random da min a max
 
-function getRandomNumber(min = 0, max =100, isMaxIncluded = true){
+function getRandomNumber(min = 1, max =5, isMaxIncluded = true){
     // blocco la funz se l'utente digita un valore NaN
     if (isNaN(min) || isNaN(max)){
         console.error(`questi valori (${min} , ${max}) devono essere dei numeri`); 
@@ -43,7 +43,16 @@ function getRandomNumber(min = 0, max =100, isMaxIncluded = true){
 
 console.log(getRandomNumber());
 
+// funzione per pari o dispari
 
+function isEven(number){
+    return number % 2 === 0;
+}
+
+console.log(isEven(7));
+
+
+// ------------- ESERCIZIO PALIDROMO -------------
 // 1.recupero l'elemento dal Dom
 const formPali = document.querySelector('form');
 const wordField = document.getElementById('wordPali');
