@@ -15,8 +15,34 @@ function reverseText (text){
     //dalla funzione mi uscirà la stringa completata
     return reverseText;
 }
+console.log(reverseText(''));
 
-console.log(reverseText(''))
+// funzione che genera un numero random da min a max
+
+function getRandomNumber(min = 0, max =100, isMaxIncluded = true){
+    // blocco la funz se l'utente digita un valore NaN
+    if (isNaN(min) || isNaN(max)){
+        console.error(`questi valori (${min} , ${max}) devono essere dei numeri`); 
+        return NaN;
+    }
+    // blocco la funz se l'utente da un min >= a max
+    if (min >= max){ 
+        console.error(`il valore max(${max}) deve essere maggiore del valore min(${min})`); 
+        return null;
+    }
+
+    // se il valore isMaxIncluded è true incremento di uno max (max + 1)
+    if (isMaxIncluded) max++;
+
+    // genero il numero casuale 
+    result = Math.floor(Math.random() * (max -min)) + min;
+
+    // dalla funzione mi uscirà il numero casuale generato
+    return result;
+}
+
+console.log(getRandomNumber());
+
 
 // 1.recupero l'elemento dal Dom
 const formPali = document.querySelector('form');
@@ -46,7 +72,7 @@ formPali.addEventListener('submit', function(e){
     // comparo l'output della funz con la parola dell'utente e verifico se è palidroma
     let messagePali;
     
-    let isPalidroma = (userWord === reverseWord) ? messagePali = `La tua parola: <strong>${userWord}</strong>, <span class="text-success">è palidroma</span>.` : messagePali = `La tua parola: <strong>${userWord}</strong>, <span class="text-danger">non è palidroma</span>.`;
+    (userWord === reverseWord) ? messagePali = `La tua parola: <strong>${userWord}</strong>, <span class="text-success">è palidroma</span>.` : messagePali = `La tua parola: <strong>${userWord}</strong>, <span class="text-danger">non è palidroma</span>.`;
     console.log(messagePali);
 
     // 4.generazione output
