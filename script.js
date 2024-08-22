@@ -49,7 +49,7 @@ function isEven(number){
     return number % 2 === 0;
 }
 
-console.log(isEven(7));
+console.log(isEven());
 
 
 // ------------- ESERCIZIO PALIDROMO -------------
@@ -89,5 +89,29 @@ formPali.addEventListener('submit', function(e){
     targertPali.innerHTML = messagePali;
 
 })
+
+// ------------- ESERCIZIO PARI E DISPARI -------------
+
+// 1.recupero l'elemento dal Dom
+
+
+
+//2.raccolta dati
+// creo le value dei fieldIndex
+
+// preparo cpuNumb, il numero generato dalla funz getRandomNumber
+
+    
+// 3.lavorazione dati
+// sommo il numero del computer con il numero dell'utente
+
+// verifico con la funz isEven se la somma è pari o dispari
+
+// verifico se la scelta dell'utente corrsponde ad isEven
+
+// preparo message se utante ha vinto o perso
+
+// 4.generazione output
+// stampo in pagina message
 
 

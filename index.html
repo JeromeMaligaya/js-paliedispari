@@ -13,19 +13,41 @@
     </head>
     
     <body>
-        <form class="row g-3 justify-content-center my-3" novalidate>
-            <div class="col-8">
+        <form class="row g-3 justify-content-center my-3">
+            <div class="col-9">
                 <label for="wordPali" class="form-label">Scopri se la tua parola è palidroma</label>
                 <input type="text" class="form-control" id="wordPali" placeholder="Inserisci una parola..." required>
             </div>
             
-            <div class="col-8">
+            <div class="col-9">
                 <button class="btn btn-primary" type="submit">Check</button>
             </div>
 
-            <div class="col-8 targetPali"></div>
+            <div class="col-9 targetPali"></div>
         </form>
 
+        <form class="row g-3 justify-content-center align-items-end my-3">
+   
+            <div class="col-3">
+              <label for="evenOdd" class="form-label">Scegli pari o dispari</label>
+              <select class="form-select" id="evenOdd" required>
+                <option selected disabled value="">...</option>
+                <option value="pari">PARI</option>
+                <option value="dispari">DISPARI</option>
+              </select>
+            </div>
+            
+            <div class="col-3">
+                <label for="userNumber" class="form-label">Digita un numero da 1 a 5</label>
+                <input type="text" class="form-control" id="userNumber" placeholder="..." required>
+              </div>
+
+            <div class="col-3">
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+
+            <div class="col-9 targetEvenOdd"></div>
+        </form>
         
         
         <!-- js bootstrap -->
