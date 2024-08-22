@@ -116,7 +116,8 @@ button.addEventListener('click', function(event){
 
     //validazione userNumber
     if (userNumber < 1 || userNumber > 5 || isNaN(userNumber)) {
-    const errorUserNumber = `<span class="text-danger">HAI INSERITO UN NUMERO NON VALIDO!</span>`; 
+    const errorUserNumber = `<span class="text-danger">HAI INSERITO UN VALORE NON VALIDO!</span>`; 
+    
     // se da errore stampa in pagina
     targetEvenOdd.innerHTML = errorUserNumber;
 
