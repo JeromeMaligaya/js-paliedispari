@@ -113,6 +113,8 @@ button.addEventListener('click', function(event){
 
     // 3.lavorazione dati
     // sommo il numero del computer con il numero dell'utente
+    somma = cpuNumber + userNumber;
+    console.log('somma', somma);
 
     // verifico con la funz isEven se la somma è pari o dispari
 
