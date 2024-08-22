@@ -97,6 +97,10 @@ const form = document.querySelector(('.form'));
 const selectField = document.getElementById('evenOdd');
 const userNumberField = document.getElementById('userNumber');
 
+// creo evento
+form.addEventListener('submit', function(e){
+    // blocco il reload
+    e.preventDefault();
 //2.raccolta dati
 // creo le value dei fieldIndex
 
@@ -115,4 +119,4 @@ const userNumberField = document.getElementById('userNumber');
 // 4.generazione output
 // stampo in pagina message
 
-
+});
