@@ -107,12 +107,21 @@ const targetEvenOdd = document.querySelector('.targetEvenOdd');
 button.addEventListener('click', function(event){
     // blocco il reload
     event.preventDefault();
-    
+
     //2.raccolta dati
     // creo le value dei fieldIndex
     userSelect = selectField.value;
     userNumber = parseInt(userNumberField.value.trim());
     console.log(userSelect, userNumber)
+
+    //validazione userNumber
+    if (userNumber < 1 || userNumber > 5 || isNaN(userNumber)) {
+    const errorUserNumber = `<span class="text-danger">HAI INSERITO UN NUMERO NON VALIDO!</span>`; 
+    // se da errore stampa in pagina
+    targetEvenOdd.innerHTML = errorUserNumber;
+
+    return;
+    }
 
     // preparo cpuNumb, il numero generato dalla funz getRandomNumber
     cpuNumber = getRandomNumber(1, 5, true);
