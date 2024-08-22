@@ -101,11 +101,13 @@ formPali.addEventListener('submit', function(e){
 const button = document.querySelector(('.button'));
 const selectField = document.getElementById('evenOdd');
 const userNumberField = document.getElementById('userNumber');
+const targetEvenOdd = document.querySelector('.targetEvenOdd');
 
 // creo evento
 button.addEventListener('click', function(event){
     // blocco il reload
     event.preventDefault();
+    
     //2.raccolta dati
     // creo le value dei fieldIndex
     userSelect = selectField.value;
@@ -122,14 +124,15 @@ button.addEventListener('click', function(event){
     console.log('somma', somma);
 
     // verifico con la funz isEven se la somma è pari o dispari
-    isEven(somma);
-    console.log('isEven', isEven(somma))
-
-    // verifico se la scelta dell'utente corrsponde ad isEven
+    isEvenSomma = isEven(somma);
+    console.log('isEvenSomma', isEvenSomma)
 
     // preparo message se utante ha vinto o perso
-
+    message = `<span class="text-danger">HAI PERSO! La somma del tuo numero <strong>${userNumber}</strong> con il mio numero <strong>${cpuNumber}</strong> è <strong>${isEvenSomma}</strong>(<strong>${somma}</strong>)<span>`
+    // verifico se la scelta dell'utente corrsponde ad isEvenSomma
+    if(userSelect === isEvenSomma) message = `<span class="text-success">HAI VINTOOOO! La somma del tuo numero <strong>${userNumber}</strong> con il mio numero <strong>${cpuNumber}</strong> è <strong>${isEvenSomma}</strong>(<strong>${somma}</strong>)<span>`
+    
     // 4.generazione output
     // stampo in pagina message
-
+    targetEvenOdd.innerHTML = message;
 });
