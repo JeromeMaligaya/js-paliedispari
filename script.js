@@ -19,10 +19,29 @@ function reverseText (text){
 console.log(reverseText(''))
 
 // 1.recupero l'elemento dal Dom
+const formPali = document.querySelector('form');
+const wordField = document.getElementById('wordPali');
 
 //2.raccolta dati
-    
+  
 // 3.lavorazione dati
-    
+
+// creo evento
+formPali.addEventListener('submit', function(e){
+    // blocco il reload
+    e.preventDefault();
+
+    // recupero la parola scritta dall'utente
+
+    // attivo la funz reverseText con la parola raccolta
+
+    // recupero e riaassegno l'output generato dalla funz
+
+    // comparo l'output della funz con la parola dell'utente e verifico se è palidroma
+
+    // stampo messagePali
+
+})
+
 
 // 4.generazione output
