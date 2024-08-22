@@ -93,30 +93,33 @@ formPali.addEventListener('submit', function(e){
 // ------------- ESERCIZIO PARI E DISPARI -------------
 
 // 1.recupero l'elemento dal Dom
-const form = document.querySelector(('.form'));
+const button = document.querySelector(('.button'));
 const selectField = document.getElementById('evenOdd');
 const userNumberField = document.getElementById('userNumber');
 
 // creo evento
-form.addEventListener('submit', function(e){
+button.addEventListener('click', function(event){
     // blocco il reload
-    e.preventDefault();
-//2.raccolta dati
-// creo le value dei fieldIndex
+    event.preventDefault();
+    //2.raccolta dati
+    // creo le value dei fieldIndex
+    userSelect = selectField.value;
+    userNumber = parseInt(userNumberField.value.trim());
+    console.log(userSelect, userNumber)
 
-// preparo cpuNumb, il numero generato dalla funz getRandomNumber
+    // preparo cpuNumb, il numero generato dalla funz getRandomNumber
 
-    
-// 3.lavorazione dati
-// sommo il numero del computer con il numero dell'utente
 
-// verifico con la funz isEven se la somma è pari o dispari
+    // 3.lavorazione dati
+    // sommo il numero del computer con il numero dell'utente
 
-// verifico se la scelta dell'utente corrsponde ad isEven
+    // verifico con la funz isEven se la somma è pari o dispari
 
-// preparo message se utante ha vinto o perso
+    // verifico se la scelta dell'utente corrsponde ad isEven
 
-// 4.generazione output
-// stampo in pagina message
+    // preparo message se utante ha vinto o perso
+
+    // 4.generazione output
+    // stampo in pagina message
 
 });
